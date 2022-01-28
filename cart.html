@@ -16,17 +16,25 @@
       src="https://kit.fontawesome.com/ac7764138a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="./firebase.js"></script>
+    <script src="./header.js"></script>
+    <script src="./cart.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="bg-white w-full">
       <div class="header h-16 bg-gray-900 flex items-center">
         <div class="logo w-1/5 h-16 ml-10">
-          <img
-            class="w-28 h-16 object-contain"
-            src="https://www.pinclipart.com/picdir/big/57-576184_view-our-amazon-storefront-amazon-logo-white-png.png"
-            alt=""
-          />
+          <a href="./index.html">
+            <img
+              class="w-28 h-16 object-contain"
+              src="https://www.pinclipart.com/picdir/big/57-576184_view-our-amazon-storefront-amazon-logo-white-png.png"
+            />
+          </a>
         </div>
         <input
           class="h-9 w-30 bg-gray-800 border border-gray-500 border-opacity-75 rounded-l-xl px-3 text-white ml-6 focus:outline-none placeholder-white"
@@ -91,16 +99,15 @@
           </svg>
           <!-- Cart Icon -->
           <div
-            class="cart-icon relative h-10 w-10 bg-yellow-500 flex items-center justify-center rounded-xl"
+            class="relative cart-icon h-10 w-10 bg-yellow-500 flex items-center justify-center rounded-xl"
           >
             <div
               class="cart-item-number text-gray-800 text-xs absolute -top-1 -right-1 h-4 w-4 bg-white rounded-full flex justify-center items-center"
-            >
-              1
-            </div>
+            ></div>
             <svg
               class="h-4 w-4 text-gray-600"
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://owww.w3.org/2000/svg"
+              class="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -127,19 +134,19 @@
               d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
             />
           </svg>
-          <svg class="rounded h-12 w-12" data-jdenticon-value="Mick"></svg>
+          <svg class="rounded h-12 w-12" data-jdenticon-value="Jessy"></svg>
         </div>
       </div>
       <div class="main h-screen flex">
         <div
-          class="main-sidebar w-1/5 bg-gray-900 border-gray-700 border-t-2 p-6"
+          class="hidden md:block border-t-2 border-gray-700 main-sidebar w-1/5 bg-gray-900 p-6"
         >
           <div class="sidebar-categories">
             <div
               class="sidebar-main-category text-yellow-500 cursor-pointer flex font-bold p-2 bg-gray-700 rounded-lg"
             >
-              <span class="w-8"
-                ><svg
+              <span class="w-8">
+                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
                   fill="none"
@@ -175,7 +182,7 @@
               <span>Books</span>
             </div>
             <div
-              class="sidebar-main-category text-white cursor-pointer flex font-bold p-2"
+              class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 mb-2"
             >
               <span class="w-8"></span>
               <span>Electronics</span>
@@ -193,15 +200,19 @@
               <span>Fashion</span>
             </div>
             <div
-              class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg mb-4"
+              class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-xl mb-4"
             >
-              <span class="w-8"><i class="fas fa-percent"></i></span>
-              <span>sell on Amazon</span>
+              <span class="w-8">
+                <i class="fas fa-percent"></i>
+              </span>
+              <span>Sell on Amazon</span>
             </div>
             <div
-              class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-lg"
+              class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-xl"
             >
-              <span class="w-8"><i class="far fa-question-circle"></i></span>
+              <span class="w-8">
+                <i class="far fa-question-circle"></i>
+              </span>
               <span>Help</span>
             </div>
           </div>
@@ -223,7 +234,7 @@
               <div
                 class="total-cost-number text-gray-600 font-bold total-cost-number text-3xl"
               >
-                $9,999.00
+                $1,439.00
               </div>
             </div>
             <div
