@@ -9,7 +9,6 @@ function getCartItems() {
 }
 
 function setCartCounter(totalCount) {
-  // cart-item-number
   document.querySelector(".cart-item-number").innerText = totalCount;
 }
 
